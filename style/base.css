@@ -1,0 +1,16 @@
+@layer theme {
+  :root {
+    --layout-fluid-min: 35ch;
+    --layout-default-repeat: 3;
+    --layout-default-gap: 3vmax;
+  }
+}
+/* @layer layout {
+  .layout-grid {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(100%, 30ch), 1fr)
+    );
+  }
+} */

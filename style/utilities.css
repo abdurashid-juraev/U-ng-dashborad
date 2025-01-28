@@ -1,0 +1,14 @@
+body {
+  font-family: sans-serif;
+}
+:root {
+  --sidenav-with: 300px;
+  --sidenav-min-with: 100px;
+  --secondary-border-color: lightgray;
+  --main-shadow-color: #e1dede;
+  --light-bg-color: #f1f5f9;
+  --hover-bg-color: rgb(232, 244, 254);
+}
+.py-20 {
+  padding: 20px 0;
+}
