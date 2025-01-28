@@ -1,1 +1,52 @@
 @import "sidebar-header.css";
+.sidebar-toggle-burger {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: background-color 150ms ease-in-out;
+  &:hover {
+    background-color: var(--hover-bg-color);
+  }
+  &.open .burger-icon {
+    background-color: transparent;
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 0;
+    }
+    &::after {
+      transform: rotate(45deg);
+      bottom: 0;
+    }
+  }
+}
+.burger-icon {
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  position: relative;
+  transition: background-color 150ms ease-in-out;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 25px;
+    height: 2px;
+    background-color: #000;
+    transition: all 200ms ease-in-out;
+  }
+  &::before {
+    top: 7px;
+  }
+  &::after {
+    bottom: 7px;
+  }
+}
