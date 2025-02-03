@@ -3,12 +3,31 @@ body {
 }
 :root {
   --sidenav-with: 300px;
-  --sidenav-min-with: 100px;
+  --sidenav-min-with: 80px;
   --secondary-border-color: lightgray;
   --main-shadow-color: #e1dede;
   --light-bg-color: #f1f5f9;
   --hover-bg-color: rgb(232, 244, 254);
 }
+
+/*font awesome icons */
+.fa-bell,
+.fa-user-circle,
+.fa-home,
+.fa-line-chart {
+  color: rgb(41, 97, 200);
+}
+/* 
+===============================================================================
+ 
+*/
+/* Rules for  font awesome icons */
 .py-20 {
   padding: 20px 0;
+}
+.md-30 {
+  font-size: 30px;
+}
+.mb-20 {
+  margin-bottom: 20px;
 }

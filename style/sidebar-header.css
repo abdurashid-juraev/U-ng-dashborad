@@ -1,17 +1,17 @@
-.u-sidenav {
-  flex-direction: column;
-}
 .u-sidenav-header {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
+  padding-top: 20px;
 }
 .u-sidenav-title {
   flex-grow: 1;
   text-align: center;
 }
-/* .u-sidenav-logo {
-} */
+.u-sidenav-logo {
+  width: 100%;
+  text-align: center;
+}
 .is-open .u-sidenav-header {
   transition: all 200ms ease-in-out;
 }
@@ -45,7 +45,6 @@
   background-color: #61f061;
 }
 
-.notification-menu,
 .profile-menu {
   &.dropdown-open {
     transform: scale(1);

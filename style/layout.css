@@ -5,11 +5,12 @@
   display: flex;
 }
 .u-sidenav {
+  flex-direction: column;
   height: 100vh;
   max-width: var(--sidenav-with);
   width: 100%;
   overflow-y: scroll;
-  padding: 20px 5px 0 10px;
+
   position: fixed;
   top: 0;
   z-index: 1;
@@ -18,11 +19,16 @@
   &.is-open {
     max-width: var(--sidenav-min-with);
     overflow-x: hidden;
+
     & ~ .u-content {
       max-width: calc(100% - var(--sidenav-min-with));
       transition: max-width 200ms ease-in-out;
     }
   }
+}
+.u-sidenav.is-open .u-sidenav-title {
+  font-size: 12px;
+  margin-left: 2px;
 }
 .u-sidenav::-webkit-scrollbar {
   width: 5px;
@@ -40,4 +46,7 @@
   max-width: calc(100% - var(--sidenav-with));
   margin-left: auto;
   transition: max-width 200ms ease-in-out;
+}
+.u-sidenav-item-title {
+  margin-left: 10px;
 }
