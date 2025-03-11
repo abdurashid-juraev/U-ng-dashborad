@@ -30,9 +30,41 @@
       </div>
     </header>
     <div class="flex grow h-full">
-      <div class="card flex justify-center">
-        <p-button label="Check" />
-      </div>
+      <p-megamenu [model]="items" orientation="vertical" styleClass="p-4">
+        <ng-template #item let-item>
+          <a
+            *ngIf="item.root"
+            pRipple
+            class="flex flex-col items-center cursor-pointer px-4 py-2 overflow-hidden relative font-semibold text-lg uppercase"
+            style="border-radius: 2rem"
+          >
+            <i [ngClass]="item.icon" style="font-size: 1.6rem"></i>
+            <span style="font-size: 11px">{{ item.label }}</span>
+          </a>
+          <a
+            *ngIf="!item.root && !item.image"
+            class="flex items-center p-4 cursor-pointer mb-2 gap-2"
+          >
+            <span
+              class="inline-flex items-center justify-center rounded-full bg-primary text-primary-contrast w-12 h-12"
+            >
+              <i [ngClass]="item.icon + ' text-lg'"></i>
+            </span>
+            <span class="inline-flex flex-col gap-1">
+              <span
+                class="font-medium text-lg text-surface-900 dark:text-surface-0"
+                >{{ item.label }}</span
+              >
+              <span class="whitespace-nowrap">{{ item.subtext }}</span>
+            </span>
+          </a>
+          <div *ngIf="item.image" class="flex flex-col items-start gap-4">
+            <img [src]="item.image" alt="megamenu-demo" class="w-full" />
+            <span>{{ item.subtext }}</span>
+            <p-button [label]="item.label" [outlined]="true"></p-button>
+          </div>
+        </ng-template>
+      </p-megamenu>
     </div>
   </div>
 </main>
